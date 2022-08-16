@@ -1,0 +1,18 @@
+<ul>
+    {{#each songs}}
+    <div>
+    <strong>#{{id}}</strong>
+    <span>{{songName}}</span>
+    <span>{{songAlbum}}</span>
+     <a href="/delete/{{id}}"<button style='border: 1px wheat;color:greenyellow; border-radius: 6px; text-decoration:none'>Delete</button></a>
+    </div>
+    {{/each}}
+</ul>
+
+<form action="post" enctype="multipart/form-data">
+    <label for="input">Insert song name</label>
+    <input type="text" name="value-1" id="songName">
+    <label for="inputy">Insert song album</label>
+    <input type="text" name="value-2" id="songAlbum">
+    <a href="/new/{{songName}}/{{songAlbum}}"<button type="submit" style='border: 1px wheat;color:greenyellow; border-radius: 6px; text-decoration:none'>Insert</button></a>
+</form>
